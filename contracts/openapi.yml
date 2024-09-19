@@ -1,0 +1,36 @@
+openapi: 3.0.3
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- description: Generated server url
+  url: http://localhost:8990
+tags: 
+  - name: userController
+    description: module for user api
+
+paths:
+  /user:
+    description: регистрация пользователя
+    post:
+      tags:
+        - userController
+      operationId: registerUser
+      parameters:
+        - $ref: '#/components/schemas/RegisterUserDto'
+
+components:
+  schemas:
+    RegisterUserDto:
+      type: object
+      properties:
+        login:
+          type: string
+        password:
+          type: string
+        required:
+          - login
+          - password 
+
+
+

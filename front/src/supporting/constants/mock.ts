@@ -13,7 +13,3 @@ export const ERROR_AUTH_RESPONSE = false
 // register
 export const SUCCESS_REGISTER_RESPONSE = true
 export const ERROR_REGISTER_RESPONSE = false
-// get
-// structure
-export const SUCCESS_GET_STRUCTURE_RESPONSE = true
-export const ERROR_GET_STRUCTURE_RESPONSE = false

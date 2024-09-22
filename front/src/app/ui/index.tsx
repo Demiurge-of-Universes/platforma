@@ -1,3 +1,4 @@
+import { App as AppSettings } from 'antd'
 import { BrowserRouter } from 'react-router-dom'
 import { RoutesApp } from 'settings/routes'
 import { ThemeProvider } from 'settings/theme'
@@ -9,7 +10,9 @@ export const App = () => {
   return (
     <BrowserRouter>
       <ThemeProvider>
-        <RoutesApp />
+        <AppSettings>
+          <RoutesApp />
+        </AppSettings>
       </ThemeProvider>
     </BrowserRouter>
   )

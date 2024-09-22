@@ -8,19 +8,19 @@
     "start": "webpack serve --mode=development",
     "dev": "webpack serve --mode=development",
     "lint": "eslint ./src --ext '.ts,.tsx',.js",
-    "lint:fix": "npm run lint -- --fix",
-    "generateApi": "swagger-typescript-api -p ../contracts/openapi.yml -o ./src/supporting/api --axios --route-types --responses --name api.ts --modular --module-name-first-tag"
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "antd": "^5.20.3",
     "axios": "^1.7.7",
+    "formik": "^2.4.6",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
     "rxjs": "^7.8.1",
     "styled-components": "^6.1.13",
-    "swagger-typescript-api": "^13.0.22",
+    "yup": "^1.4.0",
     "zustand": "^4.5.5"
   },
   "keywords": [],

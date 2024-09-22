@@ -3,15 +3,13 @@ import { Items } from './items'
 
 import { FolderStructureProps } from './index.types'
 
-export const FolderStructure = <T extends object>(
-  props: FolderStructureProps<T>,
-) => {
-  const { actions, itemsProps } = props
+export const FolderStructure = (props: FolderStructureProps) => {
+  const { actions, items } = props
 
   return (
     <div>
       {actions && <Actions {...actions} />}
-      <Items<T> {...{ ...itemsProps }} />
+      <Items {...{ ...items }} />
     </div>
   )
 }

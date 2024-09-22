@@ -1,4 +1,4 @@
-import { User } from 'supporting/api'
+import { User } from 'supporting/types'
 
 export type UserState = {
   user: User | null
@@ -6,4 +6,5 @@ export type UserState = {
   setUser: (user: User) => void
   cleanUser: () => void
   getIsAuth: () => boolean
+  setIsAuth: () => void
 }

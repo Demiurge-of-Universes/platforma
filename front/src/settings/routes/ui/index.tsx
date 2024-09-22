@@ -1,7 +1,6 @@
 import { Route, Routes, Navigate } from 'react-router-dom'
 import {
   ROUTE_AUTH_PATH,
-  ROUTE_REGISTER_PATH,
   ROUTE_BASE_PATH,
   ROUTE_MAIN_PATH,
   ROUTE_MAIN_HOME_PATH,
@@ -9,7 +8,6 @@ import {
 
 import { AuthPage } from 'pages/auth'
 import { MainHomePage, MainPage } from 'pages/main'
-import { RegisterPage } from 'pages/register'
 
 import { InitWrapper } from './initWrapper'
 
@@ -18,7 +16,6 @@ export const RoutesApp = () => {
     <Routes>
       <Route path={ROUTE_BASE_PATH} element={<InitWrapper />}>
         <Route path={ROUTE_AUTH_PATH} element={<AuthPage />} />
-        <Route path={ROUTE_REGISTER_PATH} element={<RegisterPage />} />
         <Route path={ROUTE_MAIN_PATH} element={<MainPage />}>
           <Route path={ROUTE_MAIN_HOME_PATH} element={<MainHomePage />} />
         </Route>

@@ -1,7 +1,7 @@
 import { ActionsProps } from './actions'
 import { ItemsProps } from './items'
 
-export type FolderStructureProps<T extends object> = {
+export type FolderStructureProps = {
   actions?: ActionsProps
-  itemsProps: ItemsProps<T>
+  items: ItemsProps
 }

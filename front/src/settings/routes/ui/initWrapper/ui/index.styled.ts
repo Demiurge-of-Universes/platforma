@@ -28,3 +28,8 @@ export const InitWrapper = styled.div`
     animation: ${opacity} 2s linear infinite;
   }
 `
+
+export const InitWrapperContent = styled.div`
+  width: 100vw;
+  height: 100vh;
+`

@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 
 import { useNavigate } from 'react-router-dom'
 import { appState } from 'settings/state'
-import { api } from 'supporting/api'
-import { PING_TIMER, ROUTE_REGISTER_PATH } from 'supporting/constants'
+import { pingResponse } from 'supporting/api'
+import { PING_TIMER, ROUTE_AUTH_PATH } from 'supporting/constants'
 
 export const usePing = () => {
   const navigate = useNavigate()
@@ -12,7 +12,7 @@ export const usePing = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      api.pingResponse().catch(() => navigate(ROUTE_REGISTER_PATH))
+      pingResponse().catch(() => navigate(ROUTE_AUTH_PATH))
     }, PING_TIMER)
 
     if (!isAuth && interval) {

@@ -2,22 +2,20 @@ import { useEffect } from 'react'
 
 import { useLocation, useNavigate } from 'react-router-dom'
 import { userState } from 'settings/state/user'
-import { ROUTE_REGISTER_PATH } from 'supporting/constants'
-
-import { authPaths } from '../constant'
+import { ROUTE_AUTH_PATH } from 'supporting/constants'
 
 export const useRedirect = () => {
   const { pathname } = useLocation()
 
   const navigate = useNavigate()
 
-  const isAuth = userState(state => state.getIsAuth())
+  const isAuth = userState.getState().isAuth
 
   useEffect(() => {
-    const isAuthPath = authPaths.some(x => x === pathname)
+    const isAuthPath = pathname === ROUTE_AUTH_PATH
 
     if (!isAuthPath && !isAuth) {
-      navigate(ROUTE_REGISTER_PATH)
+      navigate(ROUTE_AUTH_PATH)
     }
   }, [pathname, isAuth])
 }

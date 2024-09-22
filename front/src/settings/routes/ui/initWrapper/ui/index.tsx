@@ -1,5 +1,5 @@
-import { Logo } from 'components/logo'
 import { Outlet } from 'react-router-dom'
+import { Loader } from 'supporting/ui/loader'
 
 import { useInitData, usePing, useRedirect } from '../hooks'
 
@@ -13,14 +13,14 @@ export const InitWrapper = () => {
   if (isLoadingInitData) {
     return (
       <Styled.InitWrapper>
-        <Logo />
+        <Loader />
       </Styled.InitWrapper>
     )
   }
 
   return (
-    <>
+    <Styled.InitWrapperContent>
       <Outlet />
-    </>
+    </Styled.InitWrapperContent>
   )
 }

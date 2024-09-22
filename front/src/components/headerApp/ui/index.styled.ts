@@ -4,6 +4,8 @@ import { styled } from 'styled-components'
 const { Header } = Layout
 
 export const LayoutHeaderWrapper = styled(Header)`
+  padding: 8px 16px;
+
   width: 100%;
   height: 70px;
 

@@ -9,5 +9,5 @@ export const userLogout = () => {
     cleanUser()
   }
 
-  return <IconButton icon={<LoginOutlined />} onClick={() => handleLogOut} />
+  return <IconButton icon={<LoginOutlined />} onClick={() => handleLogOut()} />
 }

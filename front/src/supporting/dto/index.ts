@@ -1,2 +1,2 @@
-export type * from './authDto'
+export type * from './authDTO'
 export type * from './registerDTO'

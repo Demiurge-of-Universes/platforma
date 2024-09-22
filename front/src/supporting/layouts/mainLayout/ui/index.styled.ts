@@ -1,7 +1,7 @@
 import { Layout } from 'antd'
 import { styled } from 'styled-components'
 
-const { Header, Content, Sider, Footer } = Layout
+const { Header, Content, Footer } = Layout
 
 export const LayoutWrapper = styled.div`
   width: 100vw;
@@ -28,14 +28,6 @@ export const LayoutContent = styled(Content)`
   flex: 6 1 75%;
   height: 100%;
   background: #fff;
-`
-
-export const LayoutSider = styled(Sider)`
-  height: 100%;
-  flex: 6 1 25%;
-  background: none !important;
-  border-right: 1px solid grey;
-  min-width: 200px;
 `
 
 export const LayoutFooter = styled(Footer)`

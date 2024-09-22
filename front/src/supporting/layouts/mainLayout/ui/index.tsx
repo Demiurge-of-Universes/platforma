@@ -1,19 +1,23 @@
-import { HeaderApp } from 'components/headerApp'
+import { useState } from 'react'
 
-import { MainLayoutProps } from './index.types'
+import { Header } from 'components/header'
+import { SideBar } from 'components/sidebar'
+import { Outlet } from 'react-router-dom'
 
 import * as Styled from './index.styled'
 
-export const MainLayout = (props: MainLayoutProps) => {
-  const { children, leftBar } = props
+export const MainLayout = () => {
+  const [collapsed, setCollapsed] = useState(false)
+
+  const handleOpenSideBar = () => setCollapsed(prev => !prev)
 
   return (
     <Styled.LayoutWrapper>
       <Styled.LayoutBlock>
-        <HeaderApp />
+        <Header {...{ handleOpenSideBar }} />
         <Styled.LayoutBlock>
-          <Styled.LayoutSider>{leftBar}</Styled.LayoutSider>
-          <Styled.LayoutContent>{children}</Styled.LayoutContent>
+          <SideBar {...{ handleOpenSideBar, collapsed }} />
+          <Styled.LayoutContent>{<Outlet />}</Styled.LayoutContent>
         </Styled.LayoutBlock>
         <Styled.LayoutFooter>Footer</Styled.LayoutFooter>
       </Styled.LayoutBlock>

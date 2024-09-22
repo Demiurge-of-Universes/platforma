@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { appState } from 'settings/state'
 import { getUserResponse } from 'supporting/api'
-import { ROUTE_AUTH_PATH, ROUTE_MAIN_HOME_PATH } from 'supporting/constants'
+import { ROUTE_AUTH_PATH, ROUTE_HOME_PATH } from 'supporting/constants'
 
 export const useInitData = () => {
   const navigate = useNavigate()
@@ -19,7 +19,7 @@ export const useInitData = () => {
     getUserResponse()
       .then(d => {
         setUser(d)
-        navigate(ROUTE_MAIN_HOME_PATH)
+        navigate(ROUTE_HOME_PATH)
       })
       .catch(() => {
         navigate(ROUTE_AUTH_PATH)

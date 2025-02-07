@@ -1,1 +1,0 @@
-export { usePing } from './ui'

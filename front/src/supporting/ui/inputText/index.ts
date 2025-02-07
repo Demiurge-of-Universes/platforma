@@ -1,1 +1,0 @@
-export { inputText } from './ui'

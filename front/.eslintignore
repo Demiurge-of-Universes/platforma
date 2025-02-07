@@ -1,9 +1,0 @@
-node_modules/**
-mock/**
-public/**
-coverage/**
-src/i18n/**/*
-tsconfig
-src/shared/api/v1/**/*
-src/shared/api/metrics-ws/**/*
-src/shared/api/wsdb/**/*
